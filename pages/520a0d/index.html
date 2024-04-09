@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Azure实践 | Bruce Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="description" content="web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,python,css3,html5,Node,git,github等技术文章。">
+    <meta name="keywords" content="前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,python,css3,html5,Node,git,github,markdown">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.5e022b62.css" as="style"><link rel="preload" href="/assets/js/app.8758b392.js" as="script"><link rel="preload" href="/assets/js/3.9d37e447.js" as="script"><link rel="preload" href="/assets/js/2.f0782796.js" as="script"><link rel="preload" href="/assets/js/92.81a60178.js" as="script"><link rel="prefetch" href="/assets/js/1.c38d7d98.js"><link rel="prefetch" href="/assets/js/10.1da00e07.js"><link rel="prefetch" href="/assets/js/100.bc860420.js"><link rel="prefetch" href="/assets/js/101.0c5e1243.js"><link rel="prefetch" href="/assets/js/102.bfc1ee56.js"><link rel="prefetch" href="/assets/js/103.ede346d4.js"><link rel="prefetch" href="/assets/js/104.2e1c7aa8.js"><link rel="prefetch" href="/assets/js/105.f5129283.js"><link rel="prefetch" href="/assets/js/106.e054a954.js"><link rel="prefetch" href="/assets/js/107.a4955aea.js"><link rel="prefetch" href="/assets/js/108.3d7369ec.js"><link rel="prefetch" href="/assets/js/109.3348fc7f.js"><link rel="prefetch" href="/assets/js/11.622b4040.js"><link rel="prefetch" href="/assets/js/110.f0ba3b3f.js"><link rel="prefetch" href="/assets/js/111.05e33977.js"><link rel="prefetch" href="/assets/js/112.ab07180a.js"><link rel="prefetch" href="/assets/js/113.5fdcf7f1.js"><link rel="prefetch" href="/assets/js/114.a7596bbc.js"><link rel="prefetch" href="/assets/js/115.3c61f99a.js"><link rel="prefetch" href="/assets/js/116.e160f659.js"><link rel="prefetch" href="/assets/js/117.18409927.js"><link rel="prefetch" href="/assets/js/118.b6fe33e1.js"><link rel="prefetch" href="/assets/js/119.7521e2a7.js"><link rel="prefetch" href="/assets/js/12.fd133560.js"><link rel="prefetch" href="/assets/js/120.5526efb3.js"><link rel="prefetch" href="/assets/js/121.6cb7b613.js"><link rel="prefetch" href="/assets/js/122.ad21d723.js"><link rel="prefetch" href="/assets/js/123.868f8c94.js"><link rel="prefetch" href="/assets/js/124.8d2f9db2.js"><link rel="prefetch" href="/assets/js/125.e4848220.js"><link rel="prefetch" href="/assets/js/126.085c8013.js"><link rel="prefetch" href="/assets/js/127.981d64b6.js"><link rel="prefetch" href="/assets/js/128.032529c6.js"><link rel="prefetch" href="/assets/js/129.18f95003.js"><link rel="prefetch" href="/assets/js/13.c7b05016.js"><link rel="prefetch" href="/assets/js/130.0ad0244a.js"><link rel="prefetch" href="/assets/js/131.0df82517.js"><link rel="prefetch" href="/assets/js/132.d1a7718c.js"><link rel="prefetch" href="/assets/js/133.c1de59c3.js"><link rel="prefetch" href="/assets/js/134.6582ee6c.js"><link rel="prefetch" href="/assets/js/135.330fb27f.js"><link rel="prefetch" href="/assets/js/136.269906de.js"><link rel="prefetch" href="/assets/js/137.7de41195.js"><link rel="prefetch" href="/assets/js/138.a83f3198.js"><link rel="prefetch" href="/assets/js/139.d8c09be1.js"><link rel="prefetch" href="/assets/js/14.57868965.js"><link rel="prefetch" href="/assets/js/140.7c94180f.js"><link rel="prefetch" href="/assets/js/141.51a2a4e2.js"><link rel="prefetch" href="/assets/js/142.2af9bc92.js"><link rel="prefetch" href="/assets/js/143.938fa7a9.js"><link rel="prefetch" href="/assets/js/144.22bb4a74.js"><link rel="prefetch" href="/assets/js/145.80fdb8ca.js"><link rel="prefetch" href="/assets/js/146.41d1bb74.js"><link rel="prefetch" href="/assets/js/147.3fc392ee.js"><link rel="prefetch" href="/assets/js/148.0337c3fd.js"><link rel="prefetch" href="/assets/js/149.f02f04ed.js"><link rel="prefetch" href="/assets/js/15.d5e623b4.js"><link rel="prefetch" href="/assets/js/150.86a0819c.js"><link rel="prefetch" href="/assets/js/151.55ab45e1.js"><link rel="prefetch" href="/assets/js/152.94843a87.js"><link rel="prefetch" href="/assets/js/153.cd0436cf.js"><link rel="prefetch" href="/assets/js/154.cb1f192d.js"><link rel="prefetch" href="/assets/js/155.02ee03ff.js"><link rel="prefetch" href="/assets/js/156.4efa355b.js"><link rel="prefetch" href="/assets/js/157.3aa8e22d.js"><link rel="prefetch" href="/assets/js/158.605bb04f.js"><link rel="prefetch" href="/assets/js/159.755884c1.js"><link rel="prefetch" href="/assets/js/16.4678dc4c.js"><link rel="prefetch" href="/assets/js/160.4d28e3bf.js"><link rel="prefetch" href="/assets/js/161.46d157af.js"><link rel="prefetch" href="/assets/js/162.05a57e42.js"><link rel="prefetch" href="/assets/js/163.c9909d48.js"><link rel="prefetch" href="/assets/js/164.5e900797.js"><link rel="prefetch" href="/assets/js/165.c66866f1.js"><link rel="prefetch" href="/assets/js/166.00dab62f.js"><link rel="prefetch" href="/assets/js/167.c6445135.js"><link rel="prefetch" href="/assets/js/168.250c0ed3.js"><link rel="prefetch" href="/assets/js/169.359ef15e.js"><link rel="prefetch" href="/assets/js/17.06e1a34f.js"><link rel="prefetch" href="/assets/js/170.7c12bc47.js"><link rel="prefetch" href="/assets/js/171.4e5246e9.js"><link rel="prefetch" href="/assets/js/172.30e727af.js"><link rel="prefetch" href="/assets/js/173.129914de.js"><link rel="prefetch" href="/assets/js/174.5225a3ab.js"><link rel="prefetch" href="/assets/js/175.abb78f02.js"><link rel="prefetch" href="/assets/js/176.ee009d84.js"><link rel="prefetch" href="/assets/js/177.4d78fe8b.js"><link rel="prefetch" href="/assets/js/178.3632b48d.js"><link rel="prefetch" href="/assets/js/179.ad2901ca.js"><link rel="prefetch" href="/assets/js/18.ff7ceec2.js"><link rel="prefetch" href="/assets/js/180.ccbfe2ee.js"><link rel="prefetch" href="/assets/js/181.b2571b52.js"><link rel="prefetch" href="/assets/js/182.3163373a.js"><link rel="prefetch" href="/assets/js/183.b4396816.js"><link rel="prefetch" href="/assets/js/184.61459cff.js"><link rel="prefetch" href="/assets/js/185.f69d99cd.js"><link rel="prefetch" href="/assets/js/186.5bb68f88.js"><link rel="prefetch" href="/assets/js/187.298e841f.js"><link rel="prefetch" href="/assets/js/188.98e33d29.js"><link rel="prefetch" href="/assets/js/189.d1f66a43.js"><link rel="prefetch" href="/assets/js/19.84b0c399.js"><link rel="prefetch" href="/assets/js/190.8ca0d707.js"><link rel="prefetch" href="/assets/js/191.df5abe84.js"><link rel="prefetch" href="/assets/js/192.fb6cc1ad.js"><link rel="prefetch" href="/assets/js/193.33395a87.js"><link rel="prefetch" href="/assets/js/194.085b2479.js"><link rel="prefetch" href="/assets/js/195.0eba2458.js"><link rel="prefetch" href="/assets/js/196.5389d8fc.js"><link rel="prefetch" href="/assets/js/197.8acf063d.js"><link rel="prefetch" href="/assets/js/198.9c3c0526.js"><link rel="prefetch" href="/assets/js/199.04f12414.js"><link rel="prefetch" href="/assets/js/20.638e6d94.js"><link rel="prefetch" href="/assets/js/200.608aeb2d.js"><link rel="prefetch" href="/assets/js/201.ca8deb78.js"><link rel="prefetch" href="/assets/js/202.9edd7848.js"><link rel="prefetch" href="/assets/js/203.00d0ce9e.js"><link rel="prefetch" href="/assets/js/204.131edf2d.js"><link rel="prefetch" href="/assets/js/205.3129980e.js"><link rel="prefetch" href="/assets/js/206.72fca046.js"><link rel="prefetch" href="/assets/js/207.79ee03e2.js"><link rel="prefetch" href="/assets/js/208.8ecfd77b.js"><link rel="prefetch" href="/assets/js/209.4f9a2d40.js"><link rel="prefetch" href="/assets/js/21.79fe3547.js"><link rel="prefetch" href="/assets/js/210.af1d73d6.js"><link rel="prefetch" href="/assets/js/211.dafb72f3.js"><link rel="prefetch" href="/assets/js/212.8197207f.js"><link rel="prefetch" href="/assets/js/22.e980d4b5.js"><link rel="prefetch" href="/assets/js/23.37d95d4c.js"><link rel="prefetch" href="/assets/js/24.f3e2c9f4.js"><link rel="prefetch" href="/assets/js/25.38870812.js"><link rel="prefetch" href="/assets/js/26.ce68d7dc.js"><link rel="prefetch" href="/assets/js/27.0b7e7553.js"><link rel="prefetch" href="/assets/js/28.4f1734f7.js"><link rel="prefetch" href="/assets/js/29.88d32652.js"><link rel="prefetch" href="/assets/js/30.eb421598.js"><link rel="prefetch" href="/assets/js/31.edcf1815.js"><link rel="prefetch" href="/assets/js/32.522a0999.js"><link rel="prefetch" href="/assets/js/33.c173aee1.js"><link rel="prefetch" href="/assets/js/34.9fbbcdd3.js"><link rel="prefetch" href="/assets/js/35.b5f45fc6.js"><link rel="prefetch" href="/assets/js/36.b0f595bc.js"><link rel="prefetch" href="/assets/js/37.24026958.js"><link rel="prefetch" href="/assets/js/38.7847f254.js"><link rel="prefetch" href="/assets/js/39.23b2bcfc.js"><link rel="prefetch" href="/assets/js/4.00094fbf.js"><link rel="prefetch" href="/assets/js/40.ff01ed72.js"><link rel="prefetch" href="/assets/js/41.ae4a4f2d.js"><link rel="prefetch" href="/assets/js/42.4616d344.js"><link rel="prefetch" href="/assets/js/43.0b83d713.js"><link rel="prefetch" href="/assets/js/44.78078c16.js"><link rel="prefetch" href="/assets/js/45.3e3ab463.js"><link rel="prefetch" href="/assets/js/46.67207ecb.js"><link rel="prefetch" href="/assets/js/47.6d8b9b59.js"><link rel="prefetch" href="/assets/js/48.7e8e9a84.js"><link rel="prefetch" href="/assets/js/49.3f49f17c.js"><link rel="prefetch" href="/assets/js/5.852adee4.js"><link rel="prefetch" href="/assets/js/50.49a43dde.js"><link rel="prefetch" href="/assets/js/51.e5b2d796.js"><link rel="prefetch" href="/assets/js/52.a73570e7.js"><link rel="prefetch" href="/assets/js/53.f23c5ef8.js"><link rel="prefetch" href="/assets/js/54.0927b702.js"><link rel="prefetch" href="/assets/js/55.41145337.js"><link rel="prefetch" href="/assets/js/56.b1b331e2.js"><link rel="prefetch" href="/assets/js/57.996c8475.js"><link rel="prefetch" href="/assets/js/58.8becd9cf.js"><link rel="prefetch" href="/assets/js/59.98c9fbc3.js"><link rel="prefetch" href="/assets/js/6.caa8eb52.js"><link rel="prefetch" href="/assets/js/60.2a37908c.js"><link rel="prefetch" href="/assets/js/61.b4ba2984.js"><link rel="prefetch" href="/assets/js/62.d2dabf00.js"><link rel="prefetch" href="/assets/js/63.d8afe704.js"><link rel="prefetch" href="/assets/js/64.69e5f2af.js"><link rel="prefetch" href="/assets/js/65.f5cc9fbb.js"><link rel="prefetch" href="/assets/js/66.342a5783.js"><link rel="prefetch" href="/assets/js/67.613fd26b.js"><link rel="prefetch" href="/assets/js/68.737b025e.js"><link rel="prefetch" href="/assets/js/69.fd0a4938.js"><link rel="prefetch" href="/assets/js/70.644b9017.js"><link rel="prefetch" href="/assets/js/71.a4bb82a0.js"><link rel="prefetch" href="/assets/js/72.dc9a22fb.js"><link rel="prefetch" href="/assets/js/73.2d91d8a0.js"><link rel="prefetch" href="/assets/js/74.d488f274.js"><link rel="prefetch" href="/assets/js/75.0ae18fbf.js"><link rel="prefetch" href="/assets/js/76.59362548.js"><link rel="prefetch" href="/assets/js/77.b0672fe0.js"><link rel="prefetch" href="/assets/js/78.c435b12e.js"><link rel="prefetch" href="/assets/js/79.167b2c28.js"><link rel="prefetch" href="/assets/js/80.edd44ba1.js"><link rel="prefetch" href="/assets/js/81.1cbef03a.js"><link rel="prefetch" href="/assets/js/82.a05151cb.js"><link rel="prefetch" href="/assets/js/83.29fa2be8.js"><link rel="prefetch" href="/assets/js/84.8a0005fd.js"><link rel="prefetch" href="/assets/js/85.51d3719a.js"><link rel="prefetch" href="/assets/js/86.87a5c379.js"><link rel="prefetch" href="/assets/js/87.31d7b4e8.js"><link rel="prefetch" href="/assets/js/88.233deb38.js"><link rel="prefetch" href="/assets/js/89.ca389f69.js"><link rel="prefetch" href="/assets/js/9.3b29bc18.js"><link rel="prefetch" href="/assets/js/90.47900d68.js"><link rel="prefetch" href="/assets/js/91.5026d797.js"><link rel="prefetch" href="/assets/js/93.8d0c8831.js"><link rel="prefetch" href="/assets/js/94.909d53e5.js"><link rel="prefetch" href="/assets/js/95.b8164559.js"><link rel="prefetch" href="/assets/js/96.04a6d2dc.js"><link rel="prefetch" href="/assets/js/97.70aed47f.js"><link rel="prefetch" href="/assets/js/98.4b022cd2.js"><link rel="prefetch" href="/assets/js/99.b64f3c7f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.2cbf961d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5e022b62.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="Bruce Blog" class="logo"> <span class="site-name can-hide">Bruce Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><a href="/Linux/" class="link-title">Linux</a> <span class="title" style="display:none;">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/78ac47/" class="nav-link">CentOS</a></li><li class="dropdown-item"><!----> <a href="/pages/03b439/" class="nav-link">Ubuntu-Debian</a></li><li class="dropdown-item"><!----> <a href="/pages/944ad5/" class="nav-link">系统网络</a></li><li class="dropdown-item"><!----> <a href="/pages/ok458awq/" class="nav-link">系统辅助工具</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DB" class="dropdown-title"><a href="/DB/" class="link-title">DB</a> <span class="title" style="display:none;">DB</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c01dc5/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/pages/c8fd91/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/pages/b273d5/" class="nav-link">Mongodb</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Containers" class="dropdown-title"><a href="/Containers/" class="link-title">Containers</a> <span class="title" style="display:none;">Containers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/efcac1/" class="nav-link">Docker基础</a></li><li class="dropdown-item"><!----> <a href="/pages/c8b80a/" class="nav-link">Container基础</a></li><li class="dropdown-item"><h4>Kubernetes</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8f543a/" class="nav-link">Kubernetes基础</a></li><li class="dropdown-subitem"><a href="/pages/8f543b/" class="nav-link">Kubernetes辅助</a></li></ul></li><li class="dropdown-item"><!----> <a href="/pages/7281d1/" class="nav-link">Container-Network</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CICD" class="dropdown-title"><a href="/CICD/" class="link-title">CICD</a> <span class="title" style="display:none;">CICD</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/t40st87288kbhp36/" class="nav-link">Jenkins</a></li><li class="dropdown-item"><!----> <a href="/pages/a5ynywy5m02wa711/" class="nav-link">Gitlab</a></li><li class="dropdown-item"><!----> <a href="/pages/a5ynywy5m02wa811/" class="nav-link">ArgoCD</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cloud" class="dropdown-title"><a href="/Cloud/" class="link-title">Cloud</a> <span class="title" style="display:none;">Cloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/d4cc0b/" class="nav-link">Ansible</a></li><li class="dropdown-item"><!----> <a href="/pages/268dd9/" class="nav-link">Terraform</a></li><li class="dropdown-item"><!----> <a href="/pages/2e807e/" class="nav-link">AWS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Middleware" class="dropdown-title"><a href="/Middleware/" class="link-title">Middleware</a> <span class="title" style="display:none;">Middleware</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/623a90/" class="nav-link">MQ</a></li><li class="dropdown-item"><!----> <a href="/pages/482240/" class="nav-link">NGINX</a></li><li class="dropdown-item"><!----> <a href="/pages/e58360/" class="nav-link">JumpServer</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><a href="/Python" class="link-title">Python</a> <span class="title" style="display:none;">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c5ac48/" class="nav-link">基础</a></li><li class="dropdown-item"><!----> <a href="/pages/9aceb6/" class="nav-link">函数模块</a></li><li class="dropdown-item"><!----> <a href="/pages/2d5786/" class="nav-link">框架</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Golang" class="dropdown-title"><a href="/Golang/" class="link-title">Golang</a> <span class="title" style="display:none;">Golang</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b1984c/" class="nav-link">Golang环境</a></li><li class="dropdown-subitem"><a href="/pages/0ce21b/" class="nav-link">语法</a></li><li class="dropdown-subitem"><a href="/pages/428a94/" class="nav-link">数据类型与运算符</a></li><li class="dropdown-subitem"><a href="/pages/1d4b8d/" class="nav-link">分支语句</a></li><li class="dropdown-subitem"><a href="/pages/5e86ab/" class="nav-link">循环语句</a></li><li class="dropdown-subitem"><a href="/pages/95d8ab/" class="nav-link">数组</a></li><li class="dropdown-subitem"><a href="/pages/ac9edc/" class="nav-link">切片</a></li><li class="dropdown-subitem"><a href="/pages/29f4a8/" class="nav-link">Map</a></li><li class="dropdown-subitem"><a href="/pages/4d9645/" class="nav-link">String</a></li><li class="dropdown-subitem"><a href="/pages/bcd977/" class="nav-link">函数</a></li><li class="dropdown-subitem"><a href="/pages/7786c8/" class="nav-link">包的管理</a></li><li class="dropdown-subitem"><a href="/pages/d042db/" class="nav-link">指针</a></li><li class="dropdown-subitem"><a href="/pages/fda8e1/" class="nav-link">结构体</a></li><li class="dropdown-subitem"><a href="/pages/4fcd66/" class="nav-link">Go语言中的OOP</a></li><li class="dropdown-subitem"><a href="/pages/683080/" class="nav-link">方法和接口</a></li><li class="dropdown-subitem"><a href="/pages/e52d33/" class="nav-link">错误处理</a></li></ul></li><li class="dropdown-item"><h4>Go进阶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/37ec25/" class="nav-link">Go进阶</a></li></ul></li><li class="dropdown-item"><h4>Go框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/74b20e/" class="nav-link">Go框架</a></li></ul></li><li class="dropdown-item"><h4>Golang辅助</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/n7wdy2yv/" class="nav-link">Golang辅助</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front" class="dropdown-title"><a href="/Front/" class="link-title">Front</a> <span class="title" style="display:none;">Front</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/a185if5y/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/pages/g280oliz/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/pages/1i458isb/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/pages/bow8jbqd/" class="nav-link">前端辅助</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><a href="/Windows/" class="link-title">Windows</a> <span class="title" style="display:none;">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c26577/" class="nav-link">常用命令</a></li><li class="dropdown-item"><!----> <a href="/pages/4740de/" class="nav-link">性能监控工具</a></li><li class="dropdown-item"><!----> <a href="/pages/94106d/" class="nav-link">Windows下Docker使用</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><a href="/Other/" class="link-title">其他</a> <span class="title" style="display:none;">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/3df950/" class="nav-link">日常学习</a></li><li class="dropdown-item"><!----> <a href="/pages/dd762a/" class="nav-link">其他导航</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/logo.png"> <div class="blogger-info"><h3>Bruce Tao</h3> <span>运维界的该溜子</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Linux" class="dropdown-title"><a href="/Linux/" class="link-title">Linux</a> <span class="title" style="display:none;">Linux</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/78ac47/" class="nav-link">CentOS</a></li><li class="dropdown-item"><!----> <a href="/pages/03b439/" class="nav-link">Ubuntu-Debian</a></li><li class="dropdown-item"><!----> <a href="/pages/944ad5/" class="nav-link">系统网络</a></li><li class="dropdown-item"><!----> <a href="/pages/ok458awq/" class="nav-link">系统辅助工具</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DB" class="dropdown-title"><a href="/DB/" class="link-title">DB</a> <span class="title" style="display:none;">DB</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c01dc5/" class="nav-link">MySQL</a></li><li class="dropdown-item"><!----> <a href="/pages/c8fd91/" class="nav-link">Redis</a></li><li class="dropdown-item"><!----> <a href="/pages/b273d5/" class="nav-link">Mongodb</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Containers" class="dropdown-title"><a href="/Containers/" class="link-title">Containers</a> <span class="title" style="display:none;">Containers</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/efcac1/" class="nav-link">Docker基础</a></li><li class="dropdown-item"><!----> <a href="/pages/c8b80a/" class="nav-link">Container基础</a></li><li class="dropdown-item"><h4>Kubernetes</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/8f543a/" class="nav-link">Kubernetes基础</a></li><li class="dropdown-subitem"><a href="/pages/8f543b/" class="nav-link">Kubernetes辅助</a></li></ul></li><li class="dropdown-item"><!----> <a href="/pages/7281d1/" class="nav-link">Container-Network</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CICD" class="dropdown-title"><a href="/CICD/" class="link-title">CICD</a> <span class="title" style="display:none;">CICD</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/t40st87288kbhp36/" class="nav-link">Jenkins</a></li><li class="dropdown-item"><!----> <a href="/pages/a5ynywy5m02wa711/" class="nav-link">Gitlab</a></li><li class="dropdown-item"><!----> <a href="/pages/a5ynywy5m02wa811/" class="nav-link">ArgoCD</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cloud" class="dropdown-title"><a href="/Cloud/" class="link-title">Cloud</a> <span class="title" style="display:none;">Cloud</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/d4cc0b/" class="nav-link">Ansible</a></li><li class="dropdown-item"><!----> <a href="/pages/268dd9/" class="nav-link">Terraform</a></li><li class="dropdown-item"><!----> <a href="/pages/2e807e/" class="nav-link">AWS</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Middleware" class="dropdown-title"><a href="/Middleware/" class="link-title">Middleware</a> <span class="title" style="display:none;">Middleware</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/623a90/" class="nav-link">MQ</a></li><li class="dropdown-item"><!----> <a href="/pages/482240/" class="nav-link">NGINX</a></li><li class="dropdown-item"><!----> <a href="/pages/e58360/" class="nav-link">JumpServer</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python" class="dropdown-title"><a href="/Python" class="link-title">Python</a> <span class="title" style="display:none;">Python</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c5ac48/" class="nav-link">基础</a></li><li class="dropdown-item"><!----> <a href="/pages/9aceb6/" class="nav-link">函数模块</a></li><li class="dropdown-item"><!----> <a href="/pages/2d5786/" class="nav-link">框架</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Golang" class="dropdown-title"><a href="/Golang/" class="link-title">Golang</a> <span class="title" style="display:none;">Golang</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>基础</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/b1984c/" class="nav-link">Golang环境</a></li><li class="dropdown-subitem"><a href="/pages/0ce21b/" class="nav-link">语法</a></li><li class="dropdown-subitem"><a href="/pages/428a94/" class="nav-link">数据类型与运算符</a></li><li class="dropdown-subitem"><a href="/pages/1d4b8d/" class="nav-link">分支语句</a></li><li class="dropdown-subitem"><a href="/pages/5e86ab/" class="nav-link">循环语句</a></li><li class="dropdown-subitem"><a href="/pages/95d8ab/" class="nav-link">数组</a></li><li class="dropdown-subitem"><a href="/pages/ac9edc/" class="nav-link">切片</a></li><li class="dropdown-subitem"><a href="/pages/29f4a8/" class="nav-link">Map</a></li><li class="dropdown-subitem"><a href="/pages/4d9645/" class="nav-link">String</a></li><li class="dropdown-subitem"><a href="/pages/bcd977/" class="nav-link">函数</a></li><li class="dropdown-subitem"><a href="/pages/7786c8/" class="nav-link">包的管理</a></li><li class="dropdown-subitem"><a href="/pages/d042db/" class="nav-link">指针</a></li><li class="dropdown-subitem"><a href="/pages/fda8e1/" class="nav-link">结构体</a></li><li class="dropdown-subitem"><a href="/pages/4fcd66/" class="nav-link">Go语言中的OOP</a></li><li class="dropdown-subitem"><a href="/pages/683080/" class="nav-link">方法和接口</a></li><li class="dropdown-subitem"><a href="/pages/e52d33/" class="nav-link">错误处理</a></li></ul></li><li class="dropdown-item"><h4>Go进阶</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/37ec25/" class="nav-link">Go进阶</a></li></ul></li><li class="dropdown-item"><h4>Go框架</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/74b20e/" class="nav-link">Go框架</a></li></ul></li><li class="dropdown-item"><h4>Golang辅助</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/pages/n7wdy2yv/" class="nav-link">Golang辅助</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Front" class="dropdown-title"><a href="/Front/" class="link-title">Front</a> <span class="title" style="display:none;">Front</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/a185if5y/" class="nav-link">CSS</a></li><li class="dropdown-item"><!----> <a href="/pages/g280oliz/" class="nav-link">HTML</a></li><li class="dropdown-item"><!----> <a href="/pages/1i458isb/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/pages/bow8jbqd/" class="nav-link">前端辅助</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Windows" class="dropdown-title"><a href="/Windows/" class="link-title">Windows</a> <span class="title" style="display:none;">Windows</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/c26577/" class="nav-link">常用命令</a></li><li class="dropdown-item"><!----> <a href="/pages/4740de/" class="nav-link">性能监控工具</a></li><li class="dropdown-item"><!----> <a href="/pages/94106d/" class="nav-link">Windows下Docker使用</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><a href="/Other/" class="link-title">其他</a> <span class="title" style="display:none;">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/3df950/" class="nav-link">日常学习</a></li><li class="dropdown-item"><!----> <a href="/pages/dd762a/" class="nav-link">其他导航</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Ansible</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Terraform</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/268dd9/" class="sidebar-link">terraform命令使用</a></li><li><a href="/pages/b513b1/" class="sidebar-link">terraform概述</a></li><li><a href="/pages/d17b14/" class="sidebar-link">terraform基础</a></li><li><a href="/pages/84b7c4/" class="sidebar-link">terraform语法</a></li><li><a href="/pages/031426/" class="sidebar-link">Backend配置</a></li><li><a href="/pages/8caaf0/" class="sidebar-link">阿里云实践</a></li><li><a href="/pages/eae925/" class="sidebar-link">腾讯云实践</a></li><li><a href="/pages/1b4deb/" class="sidebar-link">华为云实践</a></li><li><a href="/pages/46b3ba/" class="sidebar-link">Docker实践</a></li><li><a href="/pages/ff3e65/" class="sidebar-link">AWS实践</a></li><li><a href="/pages/b78d42/" class="sidebar-link">Terraform扩展</a></li><li><a href="/pages/520a0d/" aria-current="page" class="active sidebar-link">Azure实践</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/e186e7/" class="sidebar-link">K8S实践</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>AWS</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/Cloud/#Cloud" data-v-06225672>Cloud</a></li><li data-v-06225672><a href="/Cloud/#Terraform" data-v-06225672>Terraform</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/banna2019" target="_blank" title="作者" class="beLink" data-v-06225672>Bruce</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2022-10-27</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABKFJREFUSA3tVl1oFVcQnrMbrak3QUgkya1akpJYcrUtIqW1JvFBE9LiQ5v6JmJpolbMg32rVrhgoYK0QiMY6i9Y6EMaW5D+xFJaTYItIuK2Kr3+BJNwkxBj05sQY3b3nM6cs2dv9t7NT/vQJw/sndk5M/PNzJkzewGerP+pAmy+ON8lLzUJgA8ZYxYIYZmGYRnctDaWvJJAmTtfP1pvXsBCCPP8QFcCaRkZYACgDZFO4stNIcBCajEOlmmC9XpJ9bAGCaPaPmzPl32dvLSVu3BWCTQs0XQQ6g0DYgwLIoAZbBCdW/i+781o1VVlm/410mw4h06Y7bIPHNyWDyL4FHkX03Q8SrzNhZTZriieckWt7cL6MM85YcLpsi/7O9/iXFT6MswI0DmmpkSaJ0qLxFIm3+i1THHB3zmBH3PYx9CcykcLOeQVVa7QtdxTgQgEleX2AjHYfwA+2ddV77ruGoJUbhGDI09YSNXyMpUt5ylOzxgbUmtOp7NmbNt8v3arjTBfYELmLUV+M+nSawNNAUqpT3ClJWg5I3BLT+cGW/DXNGCa6tx1aakCGEigArTn4TDIPdrXXYKCZNrHLMCOEPvHBlLQ99s9eHB7EB6NTki73CVPQ2F5MSx/uRQixfmq7rK0wYD8w8E905bnPDfwoWs/rfv93NWN/ZfvwsLIU7A09gxECyISeGJkHAau98L97tuw7NXnoPyNF8FcYGLGKsOs0mN3OEyec9esGW/ZEl945dTP34wlR2FZVQWU1q0Cw8Tr7p+hgLLNL0FPxx/Q35mA8aEUrH6nCgwEl0tn7wUiZYJnNRh6DK4UH/k0lfyrsBKdPVv/AriGIQcEDQZ65LBAGe2Rzui9Ybjz7XUppz1/uKBbyVPGkN3ZAeC6hr0x7Nr38N5+EqkoOm17xpoqR9ohQF55ERSvr4Dkr3chNfC3DMzGJlNBElW8w9nsGQvhNGIzDkXzCg8cLK951xHsFBlTJspJNi3ZFIMF2AeDV3q8DNOB+YHi6QTrChDIWDBRi5U5f+ZMfJLu3ccrqxtdxk4SKH336LFxSmkqefwU5T8fhdSdQf9IVKD6aNiwI/hnmcAZ91isYMJIaCUCx9W098+LgruikeTqzqqxKPUwqJyCPJiyemVVZBOijDGjD38Os0jOiSPL1z3SPjXNANbiNPXAdzTfukjjuknNBbyz3nwgTd3AVFqUJ5hpHlq9MveLnWwttUfoygBmvVjuikxND3znrhsELnZk7k+OjIGxeNEkomyLVta0xxn+HZhjBc4YZ/AFjHjz9u3xRZl2BN4aq9nFwWh16IrQ1aHHEd3j1+4/dB9OtH4e29A2H1DyHQRmOSfQZ1Fy7MHBTGB6J/Djq6p3OxyO2cB+4Car7v/o3GXgfAkj23+x9ID1Teoamo/SXcbvSf2PX7Vc8DdCmE1vN9di+32P9/5YR3vLnhCVGUWBjEkr3yh4H8v9CzmsbdhzOKzsJKM90iFdaTMjRPhGVsakRvOaRidljo6H6G7j+ctrJpsP+4COhDIl0La2+FS4+5mlocBaXY5QnGZysIBYoeSsl5qQzrSj/cgNrfuEzlWBfwA+EjrZyWUvpAAAAABJRU5ErkJggg==">Azure实践<!----></h1>  <div class="theme-vdoing-content content__default"><h4 id="一、实践介绍"><a href="#一、实践介绍" class="header-anchor">#</a> 一、实践介绍</h4> <h5 id="云产品资源"><a href="#云产品资源" class="header-anchor">#</a> 云产品资源</h5> <ul><li>网络(VirtualNet)
+<ul><li>ZONE</li> <li>Subnet</li></ul></li> <li>负载均衡 Load Balancer</li> <li>云服务器 VM</li> <li>对象存储</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922164959289.png" alt="image-20220922164959289"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922165049744.png" alt="image-20220922165049744"></p> <h4 id="二、初始化配置"><a href="#二、初始化配置" class="header-anchor">#</a> 二、初始化配置</h4> <h5 id="地域和可用区"><a href="#地域和可用区" class="header-anchor">#</a> 地域和可用区</h5> <blockquote><p>https://docs.microsoft.com/en-us/azure/availability-zones/az-overview</p></blockquote> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922185515984.png" alt="image-20220922185515984"></p> <h5 id="安装azure-cli"><a href="#安装azure-cli" class="header-anchor">#</a> 安装Azure-CLI</h5> <blockquote><p>https://learn.microsoft.com/zh-cn/cli/azure/install-azure-cli</p> <p>https://docs.azure.cn/zh-cn/cli/install-azure-cli-yum?view=azure-cli-latest</p> <p>az账户登录: https://learn.microsoft.com/zh-cn/cli/azure/authenticate-azure-cli</p></blockquote> <h6 id="centos安装-azure-cli"><a href="#centos安装-azure-cli" class="header-anchor">#</a> CentOS安装&quot;Azure-cli&quot;</h6> <blockquote><p>CentOS系统登录<code>Azure</code>账户需要使用<code>az login --use-device-code</code>方式登录,正常方式不适用</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># CentOS7 配置`azure-cli`yum源</span>
+<span class="token function">sudo</span> <span class="token function">rpm</span> <span class="token parameter variable">--import</span> https://packages.microsoft.com/keys/microsoft.asc
+
+<span class="token builtin class-name">echo</span> <span class="token parameter variable">-e</span> <span class="token string">&quot;[azure-cli]
+name=Azure CLI
+baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/yum.repos.d/azure-cli.repo
+
+$ yum makecahe
+
+<span class="token comment"># 使用dnf install命令安装`azure-cli`</span>
+$ yum <span class="token function">install</span> dnf <span class="token parameter variable">-y</span>
+$ dnf <span class="token function">install</span> azure-cli <span class="token parameter variable">-y</span>
+
+<span class="token comment"># 登陆和退出Azure账户</span>
+<span class="token comment">## 将登录`https://microsoft.com/devicelogin`地址拷贝到浏览器上进行操作,然后将验证的`HJ7FST4R7`KEY拷贝到时候使用</span>
+$ az login --use-device-code
+To sign in, use a web browser to <span class="token function">open</span> the page https://microsoft.com/devicelogin and enter the code HE4HDF9P8 to authenticate.
+
+<span class="token comment"># 登录后的返回结果</span>
+az login --use-device-code
+To sign in, use a web browser to <span class="token function">open</span> the page https://microsoft.com/devicelogin and enter the code HJ7FST4R7 to authenticate.
+<span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token string">&quot;cloudName&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;AzureCloud&quot;</span>,
+    <span class="token string">&quot;homeTenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;d3a12c16-4024-403e-826f-fdd73da900e8&quot;</span>,
+    <span class="token string">&quot;isDefault&quot;</span><span class="token builtin class-name">:</span> true,
+    <span class="token string">&quot;managedByTenants&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>,
+    <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;免费试用&quot;</span>,
+    <span class="token string">&quot;state&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Enabled&quot;</span>,
+    <span class="token string">&quot;tenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxxxxxx1@gmail.com&quot;</span>,
+      <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922210938915.png" alt="image-20220922210938915"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922194249649.png" alt="image-20220922194249649"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922210955842.png" alt="image-20220922210955842"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922210030942.png" alt="image-20220922210030942"></p> <h6 id="其他环境安装azure-cli"><a href="#其他环境安装azure-cli" class="header-anchor">#</a> 其他环境安装Azure CLI</h6> <ul><li>参考<code>Azure CLI安装.md</code>文档</li></ul> <h5 id="配置terraform本地缓存"><a href="#配置terraform本地缓存" class="header-anchor">#</a> 配置Terraform本地缓存</h5> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 项目目录结构</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator
+$ tree <span class="token builtin class-name">.</span>
+<span class="token builtin class-name">.</span>
+├── <span class="token function">env</span>
+│   └── dev
+│       ├── network
+│       └── <span class="token function">service</span>
+├── global
+│   └── backend
+└── modules
+
+<span class="token number">7</span> directories
+
+<span class="token comment"># 在根目录创建`.terraformrc`文件</span>
+<span class="token comment">## 本地缓存目录: &quot;$HOME/.terraform.d/terraform-plugin-cache&quot; 或 &quot;/root/.terraform.d/terraform-plugin-cache&quot;</span>
+$ <span class="token function">vim</span> .terraformrc
+plugin_cache_dir  <span class="token operator">=</span> <span class="token string">&quot;<span class="token environment constant">$HOME</span>/.terraform.d/terraform-plugin-cache&quot;</span>
+disable_checkpoint <span class="token operator">=</span> <span class="token boolean">true</span>
+
+provider_installation <span class="token punctuation">{</span>
+  filesystem_mirror <span class="token punctuation">{</span>
+    path    <span class="token operator">=</span> <span class="token string">&quot;/root/.terraform.d/terraform-plugin-cache&quot;</span>
+    include <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;registry.terraform.io/*/*&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h5 id="backend初始化配置"><a href="#backend初始化配置" class="header-anchor">#</a> Backend初始化配置</h5> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/global/backend
+$ <span class="token function">vim</span> versions.tf  <span class="token comment"># 编辑`versions.tf `文件</span>
+terraform <span class="token punctuation">{</span>
+  required_providers <span class="token punctuation">{</span>
+    azurerm <span class="token operator">=</span> <span class="token punctuation">{</span>
+      <span class="token builtin class-name">source</span>  <span class="token operator">=</span> <span class="token string">&quot;hashicorp/azurerm&quot;</span>
+      version <span class="token operator">=</span> <span class="token string">&quot;=3.23.0&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 初始化项目并下载terraform provider plugin组件</span>
+<span class="token comment">## 这里报错需要先去除`.terraformrc`文件中的如下部分,等`terraform init`完成之后再添加回去即可</span>
+provider_installation <span class="token punctuation">{</span>
+  filesystem_mirror <span class="token punctuation">{</span>
+    path    <span class="token operator">=</span> <span class="token string">&quot;/root/.terraform.d/terraform-plugin-cache&quot;</span>
+    include <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;registry.terraform.io/*/*&quot;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">## 报错信息</span>
+$ terraform init
+
+Initializing the backend<span class="token punctuation">..</span>.
+
+Initializing provider plugins<span class="token punctuation">..</span>.
+- Finding hashicorp/azurerm versions matching <span class="token string">&quot;3.23.0&quot;</span><span class="token punctuation">..</span>.
+╷
+│ Error: Failed to query available provider packages
+│
+│ Could not retrieve the list of available versions <span class="token keyword">for</span> provider hashicorp/azurerm: provider registry.terraform.io/hashicorp/azurerm was not found
+│ <span class="token keyword">in</span> any of the search locations
+│
+│   - /mnt/e/Github-Project/Terraform-Home/.terraform.d/terraform-plugin-cache
+╵
+
+<span class="token comment"># 初始化正常</span>
+$ terraform init
+
+Initializing the backend<span class="token punctuation">..</span>.
+
+Initializing provider plugins<span class="token punctuation">..</span>.
+- Reusing previous version of hashicorp/azurerm from the dependency lock <span class="token function">file</span>
+- Using previously-installed hashicorp/azurerm v3.23.0
+
+Terraform has been successfully initialized<span class="token operator">!</span>
+
+You may now begin working with Terraform. Try running <span class="token string">&quot;terraform plan&quot;</span> to see
+any changes that are required <span class="token keyword">for</span> your infrastructure. All Terraform commands
+should now work.
+
+If you ever <span class="token builtin class-name">set</span> or change modules or backend configuration <span class="token keyword">for</span> Terraform,
+rerun this <span class="token builtin class-name">command</span> to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to <span class="token keyword">do</span> so <span class="token keyword">if</span> necessary.
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br></div></div><h6 id="azure-storage-account"><a href="#azure-storage-account" class="header-anchor">#</a> Azure Storage Account</h6> <p>存储帐户包含所有 Azure 存储数据对象：blobs, file shares, queues, tables, and disks. 存储帐户为你的 Azure 存储数据提供了一个唯一的命名空间；存储帐户名称在 Azure 中必须是唯一的</p> <blockquote><p>https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/global/backend
+$ ree ./
+./
+├── main.tf
+└── versions.tf
+
+<span class="token number">0</span> directories, <span class="token number">2</span> files
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+To sign in, use a web browser to <span class="token function">open</span> the page https://microsoft.com/devicelogin and enter the code HJ7FST4R7 to authenticate.
+<span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token string">&quot;cloudName&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;AzureCloud&quot;</span>,
+    <span class="token string">&quot;homeTenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;d3a12c16-4024-403e-826f-fdd73da900e8&quot;</span>,
+    <span class="token string">&quot;isDefault&quot;</span><span class="token builtin class-name">:</span> true,
+    <span class="token string">&quot;managedByTenants&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>,
+    <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;免费试用&quot;</span>,
+    <span class="token string">&quot;state&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Enabled&quot;</span>,
+    <span class="token string">&quot;tenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxxxxx@gmail.com&quot;</span>,
+      <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p><strong>备注</strong></p> <ul><li>控制台查看<code>Azure Storage Account</code>的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922213542277.png" alt="image-20220922213542277"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922213616057.png" alt="image-20220922213616057"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922214205776.png" alt="image-20220922214205776"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922214744253.png" alt="image-20220922214744253"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922214824628.png" alt="image-20220922214824628"></p> <h6 id="backend同步状态到远程"><a href="#backend同步状态到远程" class="header-anchor">#</a> Backend同步状态到远程</h6> <blockquote><p>https://www.terraform.io/language/settings/backends/azurerm</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/global/backend
+$ <span class="token function">vim</span> backend.tf
+terraform <span class="token punctuation">{</span>
+  backend <span class="token string">&quot;azurerm&quot;</span> <span class="token punctuation">{</span>
+    resource_group_name  <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+    storage_account_name <span class="token operator">=</span> <span class="token string">&quot;tfstateadmin111&quot;</span>
+    container_name       <span class="token operator">=</span> <span class="token string">&quot;tfstate&quot;</span>
+    key                  <span class="token operator">=</span> <span class="token string">&quot;global/backend/terraform-backend.tfstate&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+To sign in, use a web browser to <span class="token function">open</span> the page https://microsoft.com/devicelogin and enter the code HJ7FST4R7 to authenticate.
+<span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token string">&quot;cloudName&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;AzureCloud&quot;</span>,
+    <span class="token string">&quot;homeTenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;d3a12c16-4024-403e-826f-fdd73da900e8&quot;</span>,
+    <span class="token string">&quot;isDefault&quot;</span><span class="token builtin class-name">:</span> true,
+    <span class="token string">&quot;managedByTenants&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>,
+    <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;免费试用&quot;</span>,
+    <span class="token string">&quot;state&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;Enabled&quot;</span>,
+    <span class="token string">&quot;tenantId&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;39e875d4-60ed-4dea-b35b-5efbccf67d48&quot;</span>,
+    <span class="token string">&quot;user&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;xxxxxx@gmail.com&quot;</span>,
+      <span class="token string">&quot;type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;user&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+
+<span class="token comment"># terraform init初始化并同步状态到远程</span>
+$ terraform  init
+
+Initializing the backend<span class="token punctuation">..</span>.
+Acquiring state lock. This may take a few moments<span class="token punctuation">..</span>.
+Do you want to copy existing state to the new backend?
+  Pre-existing state was found <span class="token keyword">while</span> migrating the previous <span class="token string">&quot;local&quot;</span> backend to the
+  newly configured <span class="token string">&quot;azurerm&quot;</span> backend. No existing state was found <span class="token keyword">in</span> the newly
+  configured <span class="token string">&quot;azurerm&quot;</span> backend. Do you want to copy this state to the new <span class="token string">&quot;azurerm&quot;</span>
+  backend? Enter <span class="token string">&quot;yes&quot;</span> to copy and <span class="token string">&quot;no&quot;</span> to start with an empty state.
+
+  Enter a value: <span class="token function">yes</span>
+
+Releasing state lock. This may take a few moments<span class="token punctuation">..</span>.
+
+Successfully configured the backend <span class="token string">&quot;azurerm&quot;</span><span class="token operator">!</span> Terraform will automatically
+use this backend unless the backend configuration changes.
+
+Initializing provider plugins<span class="token punctuation">..</span>.
+- Reusing previous version of hashicorp/azurerm from the dependency lock <span class="token function">file</span>
+- Using previously-installed hashicorp/azurerm v3.23.0
+
+Terraform has been successfully initialized<span class="token operator">!</span>
+
+You may now begin working with Terraform. Try running <span class="token string">&quot;terraform plan&quot;</span> to see
+any changes that are required <span class="token keyword">for</span> your infrastructure. All Terraform commands
+should now work.
+
+If you ever <span class="token builtin class-name">set</span> or change modules or backend configuration <span class="token keyword">for</span> Terraform,
+rerun this <span class="token builtin class-name">command</span> to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to <span class="token keyword">do</span> so <span class="token keyword">if</span> necessary.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div><p><strong>备注</strong></p> <ul><li>控制台查看state的同步结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922215753987.png" alt="image-20220922215753987"></p> <h4 id="二、开通虚拟网络和子网资源"><a href="#二、开通虚拟网络和子网资源" class="header-anchor">#</a> 二、开通虚拟网络和子网资源</h4> <h5 id="创建资源"><a href="#创建资源" class="header-anchor">#</a> 创建资源</h5> <ul><li>VirtualNetwork 虚拟网络</li> <li>Subnet 子网</li></ul> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/virtul-net&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/network
+$  tree  ./
+./
+├── backend.tf
+├── outputs.tf
+├── variables.tf
+├── versions.tf
+└── virtual-net.tf
+
+<span class="token number">0</span> directories, <span class="token number">5</span> files
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建的虚拟网络和子网是调用modules下的virtual-net模块进行创建的</li> <li>控制台验证虚拟网络和子网的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922224127628.png" alt="image-20220922224127628"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922224608802.png" alt="image-20220922224608802"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220922224644594.png" alt="image-20220922224644594"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923001259053.png" alt="image-20220923001259053"></p> <h4 id="三、开通安全组资源"><a href="#三、开通安全组资源" class="header-anchor">#</a> 三、开通安全组资源</h4> <ul><li>security_group 安全组和规则</li></ul> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_group</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/security-group&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/network
+$  <span class="token function">vim</span> network-security_group.tf
+locals <span class="token punctuation">{</span>
+  security_group_name          <span class="token operator">=</span> <span class="token string">&quot;dev-network-secgroup&quot;</span>
+  secgroup_location_name       <span class="token operator">=</span> <span class="token string">&quot;East US&quot;</span>
+  secgroup_resource_group_name <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+  secgroup_env_name            <span class="token operator">=</span> <span class="token string">&quot;dev-network-security-group&quot;</span>
+  subnet_ids                   <span class="token operator">=</span> module.network.network_subnet_ids
+<span class="token punctuation">}</span>
+
+module <span class="token string">&quot;security-groups&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>                       <span class="token operator">=</span> <span class="token string">&quot;../../../modules/security-group&quot;</span>
+  security_group_name          <span class="token operator">=</span> local.security_group_name
+  secgroup_location_name       <span class="token operator">=</span> local.secgroup_location_name
+  secgroup_resource_group_name <span class="token operator">=</span> local.secgroup_resource_group_name
+  secgroup_env_name            <span class="token operator">=</span> local.secgroup_env_name
+  subnet_ids                   <span class="token operator">=</span> local.subnet_ids
+
+  ports <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      port     <span class="token operator">=</span> <span class="token string">&quot;80&quot;</span>
+      priority <span class="token operator">=</span> <span class="token number">100</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+      port     <span class="token operator">=</span> <span class="token string">&quot;22&quot;</span>
+      priority <span class="token operator">=</span> <span class="token number">101</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+      port     <span class="token operator">=</span> <span class="token string">&quot;443&quot;</span>
+      priority <span class="token operator">=</span> <span class="token number">102</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建的子网安全组是调用modules下的security-group模块进行创建的</li> <li>控制台验证子网安全组的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923105950836.png" alt="image-20220923105950836"></p> <h4 id="四、开通网络接口和公网ip"><a href="#四、开通网络接口和公网ip" class="header-anchor">#</a> 四、开通网络接口和公网IP</h4> <h5 id="公共参数剥离"><a href="#公共参数剥离" class="header-anchor">#</a> 公共参数剥离</h5> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/network
+$  tree  ./
+./
+├── backend.tf
+├── main.tf
+├── network-security_group.tf
+├── outputs.tf
+├── variables.tf
+├── versions.tf
+└── virtual-net.tf
+
+<span class="token number">0</span> directories, <span class="token number">7</span> files
+
+<span class="token comment"># 查看独立出来的公共参数</span>
+$ <span class="token function">cat</span> main.tf 
+locals <span class="token punctuation">{</span>
+  location_name       <span class="token operator">=</span> <span class="token string">&quot;East US&quot;</span>
+  resource_group_name <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+  subnet_ids <span class="token operator">=</span> module.network.network_subnet_ids
+  env_name   <span class="token operator">=</span> <span class="token string">&quot;dev&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h5 id="创建公网ip"><a href="#创建公网ip" class="header-anchor">#</a> 创建公网IP</h5> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/public-ip&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/network
+
+<span class="token comment"># 依赖公共参数</span>
+$  <span class="token function">vim</span> main.tf
+locals <span class="token punctuation">{</span>
+  location_name       <span class="token operator">=</span> <span class="token string">&quot;East US&quot;</span>
+  resource_group_name <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+  env_name   <span class="token operator">=</span> <span class="token string">&quot;dev&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 穿件公网IP</span>
+$ <span class="token function">vim</span> public_ip.tf
+module <span class="token string">&quot;public-ip&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>              <span class="token operator">=</span> <span class="token string">&quot;../../../modules/public-ip&quot;</span>
+  location_name       <span class="token operator">=</span> local.location_name
+  resource_group_name <span class="token operator">=</span> local.resource_group_name
+  env_name            <span class="token operator">=</span> local.env_name
+  public_name_groups  <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;serve01&quot;</span>, <span class="token string">&quot;server02&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建的公网IP是调用modules下的public-ip模块进行创建的</li> <li>控制台验证公网IP的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923151926609.png" alt="image-20220923151926609"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923151957291.png" alt="image-20220923151957291"></p> <h5 id="vm-nic-网络接口"><a href="#vm-nic-网络接口" class="header-anchor">#</a> VM-NIC 网络接口</h5> <ul><li>创建VM-NIC网络接口并关联上 上面的公网IP地址</li></ul> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_interface</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/nics&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/network
+
+<span class="token comment"># 依赖的公共参数</span>
+$  <span class="token function">vim</span> main.tf
+locals <span class="token punctuation">{</span>
+  location_name       <span class="token operator">=</span> <span class="token string">&quot;East US&quot;</span>
+  resource_group_name <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+  subnet_ids <span class="token operator">=</span> module.network.network_subnet_ids
+  public_ids <span class="token operator">=</span> module.public-ip.public_id_list
+  env_name   <span class="token operator">=</span> <span class="token string">&quot;dev&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 创建vm-nic并关联公网地址</span>
+$ <span class="token function">vim</span> vms.tf
+module <span class="token string">&quot;vms&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>              <span class="token operator">=</span> <span class="token string">&quot;../../../modules/vms&quot;</span>
+  location_name       <span class="token operator">=</span> local.location_name
+  resource_group_name <span class="token operator">=</span> local.resource_group_name
+  vms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;serve01&quot;</span>, <span class="token string">&quot;server02&quot;</span><span class="token punctuation">]</span>
+  vms_configs <span class="token operator">=</span> <span class="token punctuation">{</span>
+    serve01 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      subnet_id <span class="token operator">=</span> <span class="token string">&quot;<span class="token variable">${local.subnet_ids<span class="token punctuation">[</span>0<span class="token punctuation">]</span>}</span>&quot;</span>
+      public_id <span class="token operator">=</span> <span class="token string">&quot;<span class="token variable">${local.public_ids<span class="token punctuation">[</span>0<span class="token punctuation">]</span>}</span>&quot;</span>
+    <span class="token punctuation">}</span>,
+    server02 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      subnet_id <span class="token operator">=</span> <span class="token string">&quot;<span class="token variable">${local.subnet_ids<span class="token punctuation">[</span>1<span class="token punctuation">]</span>}</span>&quot;</span>
+      public_id <span class="token operator">=</span> <span class="token string">&quot;<span class="token variable">${local.public_ids<span class="token punctuation">[</span>1<span class="token punctuation">]</span>}</span>&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建的网络接口是调用modules下的nics模块进行创建的</li> <li>控制台验证网络接口的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923145116039.png" alt="image-20220923145116039"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923151211280.png" alt="image-20220923151211280"></p> <h4 id="五、开通linux虚拟机资源"><a href="#五、开通linux虚拟机资源" class="header-anchor">#</a> 五、开通Linux虚拟机资源</h4> <ul><li><p>过滤获取可用的image</p> <blockquote><p>https://learn.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage</p></blockquote></li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 查看所有的 image</span>
+$ az vm image list <span class="token parameter variable">--output</span> table
+You are viewing an offline list of images, use <span class="token parameter variable">--all</span> to retrieve an up-to-date list
+Architecture    Offer                         Publisher               Sku                                 Urn                                                                             UrnAlias                 Version
+--------------  ----------------------------  ----------------------  ----------------------------------  ------------------------------------------------------------------------------  -----------------------  ---------
+x64             CentOS                        OpenLogic               <span class="token number">7.5</span>                                 OpenLogic:CentOS:7.5:latest                                                     CentOS                   latest
+x64             debian-10                     Debian                  <span class="token number">10</span>                                  Debian:debian-10:10:latest                                                      Debian                   latest
+x64             flatcar-container-linux-free  kinvolk                 stable                              kinvolk:flatcar-container-linux-free:stable:latest                              Flatcar                  latest
+x64             opensuse-leap-15-3            SUSE                    gen2                                SUSE:opensuse-leap-15-3:gen2:latest                                             openSUSE-Leap            latest
+x64             RHEL                          RedHat                  <span class="token number">7</span>-LVM                               RedHat:RHEL:7-LVM:latest                                                        RHEL                     latest
+x64             sles-15-sp3                   SUSE                    gen2                                SUSE:sles-15-sp3:gen2:latest                                                    SLES                     latest
+x64             UbuntuServer                  Canonical               <span class="token number">18.04</span>-LTS                           Canonical:UbuntuServer:18.04-LTS:latest                                         UbuntuLTS                latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2022</span>-Datacenter                     MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest                     Win2022Datacenter        latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2022</span>-datacenter-azure-edition-core  MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition-core:latest  Win2022AzureEditionCore  latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2019</span>-Datacenter                     MicrosoftWindowsServer:WindowsServer:2019-Datacenter:latest                     Win2019Datacenter        latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2016</span>-Datacenter                     MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest                     Win2016Datacenter        latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2012</span>-R2-Datacenter                  MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:latest                  Win2012R2Datacenter      latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2012</span>-Datacenter                     MicrosoftWindowsServer:WindowsServer:2012-Datacenter:latest                     Win2012Datacenter        latest
+x64             WindowsServer                 MicrosoftWindowsServer  <span class="token number">2008</span>-R2-SP1                         MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest                         Win2008R2SP1             latest
+
+<span class="token comment"># 根据指定条件过滤image</span>
+<span class="token comment">## 区域为`westus` ,`publisher`为Canonical(典型),`offer`提供为`UbuntuServer`,`sku`为`18.04-LTS`</span>
+az vm image list <span class="token punctuation">\</span>
+    <span class="token parameter variable">--location</span> westus <span class="token punctuation">\</span>
+    <span class="token parameter variable">--publisher</span> Canonical <span class="token punctuation">\</span>
+    <span class="token parameter variable">--offer</span> UbuntuServer <span class="token punctuation">\</span>
+    <span class="token parameter variable">--sku</span> <span class="token number">18.04</span>-LTS <span class="token punctuation">\</span>
+    <span class="token parameter variable">--all</span> <span class="token parameter variable">--output</span> table
+
+<span class="token comment">## publisher为`Canonical`典型的</span>
+$ az vm image list <span class="token parameter variable">--offer</span> Ubuntu <span class="token parameter variable">--all</span> <span class="token parameter variable">--publisher</span> Canonical <span class="token parameter variable">--output</span> table
+$ az vm image list <span class="token parameter variable">--offer</span> Ubuntu <span class="token parameter variable">--all</span> <span class="token parameter variable">--output</span> table
+$ az vm image list <span class="token parameter variable">--offer</span> Centos <span class="token parameter variable">--all</span> <span class="token parameter variable">--output</span> table
+$ az vm image list <span class="token parameter variable">--offer</span> Ubuntu <span class="token parameter variable">--all</span> <span class="token parameter variable">--output</span> table<span class="token operator">|</span><span class="token function">more</span>
+Architecture    Offer                                               Publisher                           Sku                              
+                   Urn                                                                                                                   
+            Version
+--------------  --------------------------------------------------  ----------------------------------  ---------------------------------
+-----------------  ----------------------------------------------------------------------------------------------------------------------
+----------  ----------------
+x64             nsimd-ubuntu-20-04                                  ageniumscale1591804889317           plan-for-nsimd-ubuntu-20-04      
+                   ageniumscale1591804889317:nsimd-ubuntu-20-04:plan-for-nsimd-ubuntu-20-04:1.0.0                                        
+            <span class="token number">1.0</span>.0
+x64             aquaveo-tethys-platform-33-ubuntu-2004              aquaveollc1633710529908             tethys33                         
+                   aquaveollc1633710529908:aquaveo-tethys-platform-33-ubuntu-2004:tethys33:3.3.0                                         
+            <span class="token number">3.3</span>.0
+x64             abantecart-on-ubuntu-1804                           apps-4-rent                         abantecart-on-ubuntu-1804        
+                   apps-4-rent:abantecart-on-ubuntu-1804:abantecart-on-ubuntu-1804:1.0.1                                                 
+            <span class="token number">1.0</span>.1
+x64             minecraft-bedrock-ubuntu-18-04-minimal              articentgroupllc1635512619530       minecraft-bedrock-ubuntu-18-04-mi
+nimal              articentgroupllc1635512619530:minecraft-bedrock-ubuntu-18-04-minimal:minecraft-bedrock-ubuntu-18-04-minimal:1.0.0     
+            <span class="token number">1.0</span>.0
+x64             active-mq-on-ubuntu-eighteen                        apps-4-rent                         active-mq-on-ubuntu-eighteen     
+                   apps-4-rent:active-mq-on-ubuntu-eighteen:active-mq-on-ubuntu-eighteen:1.0.1                                           
+            <span class="token number">1.0</span>.1
+x64             activemq_ubuntu18_04lts                             askforcloudllc1651766049149         activemq_ubuntu18_04lts          
+                   askforcloudllc1651766049149:activemq_ubuntu18_04lts:activemq_ubuntu18_04lts:0.0.1                                     
+            <span class="token number">0.0</span>.1
+x64             minecraft-bedrock-ubuntu-20-04-minimal              articentgroupllc1635512619530       minecraft-bedrock-ubuntu-20-04-mi
+nimal              articentgroupllc1635512619530:minecraft-bedrock-ubuntu-20-04-minimal:minecraft-bedrock-ubuntu-20-04-minimal:1.0.0     
+            <span class="token number">1.0</span>.0
+x64             akaunting-on-ubuntu                                 apps-4-rent                         akaunting-on-ubuntu              
+                   apps-4-rent:akaunting-on-ubuntu:akaunting-on-ubuntu:1.0.1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br></div></div><blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine</p> <p>https://www.terraform.io/language/functions/base64encode</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/managed_disk</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_machine_data_disk_attachment</p> <p>查看可选用的系统镜像:</p> <p>​	 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/cli-ps-findimage</p> <p>​	 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/imaging</p> <p>vm实例类型:</p> <p>​	https://learn.microsoft.com/en-us/azure/virtual-machines/sizes</p> <p>​	https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable</p> <p>Azure 托管磁盘:</p> <p>​	https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview</p> <p>​	https://learn.microsoft.com/en-us/azure/virtual-machines/disks-scalability-targets</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/vms&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/service
+
+<span class="token comment"># 创建服务连接公私钥</span>
+$ <span class="token function">mkdir</span> <span class="token parameter variable">-pv</span> config
+$ ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-m</span> PEM <span class="token parameter variable">-f</span> config/public_key  <span class="token comment"># 创建用于ssh连接的private key;(-f:指定文件名,-C:备注)</span>
+$ <span class="token function">mv</span> config/public_key config/public_key.pem
+
+$  tree  ./
+./
+├── backend.tf
+├── config
+│   ├── public_key.pem
+│   └── public_key.pub
+├── main.tf
+├── outputs.tf
+├── variables.tf
+├── versions.tf
+└── vms.tf
+
+<span class="token number">1</span> directory, <span class="token number">8</span> files
+
+
+
+<span class="token comment"># 依赖的公共参数</span>
+$  <span class="token function">vim</span> main.tf
+data <span class="token string">&quot;terraform_remote_state&quot;</span> <span class="token string">&quot;network-data&quot;</span> <span class="token punctuation">{</span>
+  backend <span class="token operator">=</span> <span class="token string">&quot;azurerm&quot;</span>
+  config <span class="token operator">=</span> <span class="token punctuation">{</span>
+    resource_group_name  <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+    storage_account_name <span class="token operator">=</span> <span class="token string">&quot;tfstateadmin111&quot;</span>
+    container_name       <span class="token operator">=</span> <span class="token string">&quot;tfstate&quot;</span>
+    key                  <span class="token operator">=</span> <span class="token string">&quot;env/dev/network/terraform-network.tfstate&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+locals <span class="token punctuation">{</span>
+  location_name       <span class="token operator">=</span> <span class="token string">&quot;East US&quot;</span>
+  resource_group_name <span class="token operator">=</span> <span class="token string">&quot;terraform-demo&quot;</span>
+  env_name            <span class="token operator">=</span> <span class="token string">&quot;dev&quot;</span>
+
+  <span class="token comment"># 这里的`vms`和`vms_config`,会被`vms.tf`和`mount-data-disk.tf`使用到</span>
+  vms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;server01&quot;</span>, <span class="token string">&quot;server02&quot;</span><span class="token punctuation">]</span>
+  vms_cofigs <span class="token operator">=</span> <span class="token punctuation">{</span>
+    server01 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      zone      <span class="token operator">=</span> <span class="token string">&quot;1&quot;</span>
+      subnet_id <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.subnet_ids<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      publicip  <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.public_ids<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+      nic_id    <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.nics_ids<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>,
+    server02 <span class="token operator">=</span> <span class="token punctuation">{</span>
+      zone      <span class="token operator">=</span> <span class="token string">&quot;2&quot;</span>
+      subnet_id <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.subnet_ids<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      publicip  <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.public_ids<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+      nic_id    <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.nics_ids<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 创建vms实例</span>
+$ <span class="token function">vim</span> vims.tf
+module <span class="token string">&quot;vms&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>         <span class="token operator">=</span> <span class="token string">&quot;../../../modules/vms&quot;</span>
+  vms_size       <span class="token operator">=</span> <span class="token string">&quot;Standard_B2s&quot;</span>
+  admin_username <span class="token operator">=</span> <span class="token string">&quot;adminuser&quot;</span>
+  <span class="token comment"># 这里取消使用密码登录</span>
+  <span class="token comment"># admin_password                  = &quot;root@123&quot;</span>
+  <span class="token comment"># 开启禁用密码登录参数</span>
+  disable_password_authentication <span class="token operator">=</span> <span class="token boolean">true</span>
+  os_disk_caching                 <span class="token operator">=</span> <span class="token string">&quot;ReadWrite&quot;</span>
+  os_disk_storage_account_type    <span class="token operator">=</span> <span class="token string">&quot;Standard_LRS&quot;</span>
+  os_disk_size                    <span class="token operator">=</span> <span class="token number">50</span>
+  source_image_publisher          <span class="token operator">=</span> <span class="token string">&quot;Canonical&quot;</span>
+  source_image_offer              <span class="token operator">=</span> <span class="token string">&quot;UbuntuServer&quot;</span>
+  source_image_sku                <span class="token operator">=</span> <span class="token string">&quot;18.04-LTS&quot;</span>
+  source_image_version            <span class="token operator">=</span> <span class="token string">&quot;latest&quot;</span>
+  resource_group_name             <span class="token operator">=</span> local.resource_group_name
+  location_name                   <span class="token operator">=</span> local.location_name
+  public_key_path                 <span class="token operator">=</span> file<span class="token punctuation">(</span><span class="token string">&quot;<span class="token variable">${path.module}</span>/config/public_key.pub&quot;</span><span class="token punctuation">)</span>
+  vms                             <span class="token operator">=</span> local.vms
+  vms_cofigs                      <span class="token operator">=</span> local.vms_cofigs
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 创建额外挂载的数据盘</span>
+$ <span class="token function">vim</span> mount-data-disk.tf
+module <span class="token string">&quot;attachment-data-disk&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>                         <span class="token operator">=</span> <span class="token string">&quot;../../../modules/data-disk&quot;</span>
+  location_name                  <span class="token operator">=</span> local.location_name
+  resource_group_name            <span class="token operator">=</span> local.resource_group_name
+  data_disk_option               <span class="token operator">=</span> <span class="token string">&quot;Empty&quot;</span>
+  data_disk_size                 <span class="token operator">=</span> <span class="token number">50</span>
+  data_disk_storage_account_type <span class="token operator">=</span> <span class="token string">&quot;Standard_LRS&quot;</span>
+  data_disk_in_os_id             <span class="token operator">=</span> <span class="token string">&quot;10&quot;</span>
+  data_disk_caching              <span class="token operator">=</span> <span class="token string">&quot;ReadWrite&quot;</span>
+  vms                            <span class="token operator">=</span> local.vms
+  vms_cofigs                     <span class="token operator">=</span> local.vms_cofigs
+  virtual_machine_ids            <span class="token operator">=</span> module.vms.vms_ids
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建linux虚拟机是调用modules下的vms模块进行创建的</li> <li>控制台验证linux虚拟机的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923232502899.png" alt="image-20220923232502899"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923232402397.png" alt="image-20220923232402397"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923232436870.png" alt="image-20220923232436870"></p> <ul><li>远程登录服务测试</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 使用秘钥登录</span>
+$ <span class="token function">ssh</span> <span class="token parameter variable">-i</span> public_key.pem adminuser@20.246.216.106
+
+<span class="token comment"># 使用密码方式登录</span>
+$ <span class="token function">ssh</span> adminuser@20.246.216.106
+The authenticity of <span class="token function">host</span> <span class="token string">'20.246.216.106 (20.246.216.106)'</span> can<span class="token string">'t be established.
+ECDSA key fingerprint is SHA256:+/iejTew26GoXSqEAPkZQtYa2YLYDd/OCTy1N55Eh3g.
+ECDSA key fingerprint is MD5:ac:7b:4c:63:38:77:ff:56:71:bd:ec:fc:ef:e2:68:ff.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '</span><span class="token number">20.246</span>.216.106<span class="token string">' (ECDSA) to the list of known hosts.
+adminuser@20.246.216.106'</span>s password: 
+Welcome to Ubuntu <span class="token number">18.04</span>.6 LTS <span class="token punctuation">(</span>GNU/Linux <span class="token number">5.4</span>.0-1091-azure x86_64<span class="token punctuation">)</span>
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Sep <span class="token number">23</span> <span class="token number">15</span>:26:31 UTC <span class="token number">2022</span>
+
+  System load:  <span class="token number">0.09</span>              Processes:           <span class="token number">114</span>
+  Usage of /:   <span class="token number">4.9</span>% of <span class="token number">28</span>.89GB   Users logged in:     <span class="token number">0</span>
+  Memory usage: <span class="token number">22</span>%               IP address <span class="token keyword">for</span> eth0: <span class="token number">10.0</span>.1.4
+  Swap usage:   <span class="token number">0</span>%
+
+<span class="token number">0</span> updates can be applied immediately.
+
+
+
+The programs included with the Ubuntu system are <span class="token function">free</span> software<span class="token punctuation">;</span>
+the exact distribution terms <span class="token keyword">for</span> each program are described <span class="token keyword">in</span> the
+individual files <span class="token keyword">in</span> /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a <span class="token builtin class-name">command</span> as administrator <span class="token punctuation">(</span>user <span class="token string">&quot;root&quot;</span><span class="token punctuation">)</span>, use <span class="token string">&quot;sudo &lt;command&gt;&quot;</span><span class="token builtin class-name">.</span>
+See <span class="token string">&quot;man sudo_root&quot;</span> <span class="token keyword">for</span> details.
+
+$ <span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span><span class="token function">grep</span> nginx
+root      <span class="token number">2250</span>     <span class="token number">1</span>  <span class="token number">0</span> <span class="token number">15</span>:22 ?        00:00:00 nginx: master process /usr/sbin/nginx <span class="token parameter variable">-g</span> daemon on<span class="token punctuation">;</span> master_process on<span class="token punctuation">;</span>
+www-data  <span class="token number">2255</span>  <span class="token number">2250</span>  <span class="token number">0</span> <span class="token number">15</span>:22 ?        00:00:00 nginx: worker process
+adminus+  <span class="token number">2478</span>  <span class="token number">2440</span>  <span class="token number">0</span> <span class="token number">15</span>:27 pts/0    00:00:00 <span class="token function">grep</span> <span class="token parameter variable">--color</span><span class="token operator">=</span>auto nginx
+adminuser@server01:~$ <span class="token function">curl</span> http://localhost:80
+server01
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><ul><li>访问linux虚拟机绑定的公网IP地址测试nginx服务是否正常</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923232952072.png" alt="image-20220923232952072"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220923233000791.png" alt="image-20220923233000791"></p> <h5 id="注意"><a href="#注意" class="header-anchor">#</a> 注意:</h5> <ul><li>Azure资源变更替换</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 先创建出来需要替换的资源,再来替换旧的资源</span>
+  lifecycle <span class="token punctuation">{</span>
+    create_before_destroy <span class="token operator">=</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment"># Azure 使用`create_before_destroy`后的错误(在Azure是直接进行modify修或者是遵循先destroy后create操作)</span>
+<span class="token comment">## Azure会对资源的名称进行一致性校验,所以创建同样名称的新资源是无法通过的</span>
+
+│ Error: A resource with the ID <span class="token string">&quot;/subscriptions/d3a12c16-4024-403e-826f-fdd73da900e8/resourceGroups/terraform-demo/providers/Microsoft.Compute/virtualMachines/server02&quot;</span> already exists - to be managed via Terraform this resource needs to be imported into the State. Please see the resource documentation <span class="token keyword">for</span> <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+│ 
+│   with module.vms.azurerm_linux_virtual_machine.server<span class="token punctuation">[</span><span class="token string">&quot;server02&quot;</span><span class="token punctuation">]</span>,
+│   on <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/modules/vms/main.tf line <span class="token number">1</span>, <span class="token keyword">in</span> resource <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token string">&quot;server&quot;</span><span class="token builtin class-name">:</span>
+│    <span class="token number">1</span>: resource <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token string">&quot;server&quot;</span> <span class="token punctuation">{</span>
+│ 
+╵
+╷
+│ Error: A resource with the ID <span class="token string">&quot;/subscriptions/d3a12c16-4024-403e-826f-fdd73da900e8/resourceGroups/terraform-demo/providers/Microsoft.Compute/virtualMachines/server01&quot;</span> already exists - to be managed via Terraform this resource needs to be imported into the State. Please see the resource documentation <span class="token keyword">for</span> <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token keyword">for</span> <span class="token function">more</span> information.
+│ 
+│   with module.vms.azurerm_linux_virtual_machine.server<span class="token punctuation">[</span><span class="token string">&quot;server01&quot;</span><span class="token punctuation">]</span>,
+│   on <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/modules/vms/main.tf line <span class="token number">1</span>, <span class="token keyword">in</span> resource <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token string">&quot;server&quot;</span><span class="token builtin class-name">:</span>
+│    <span class="token number">1</span>: resource <span class="token string">&quot;azurerm_linux_virtual_machine&quot;</span> <span class="token string">&quot;server&quot;</span> <span class="token punctuation">{</span>
+│ 
+╵
+Releasing state lock. This may take a few moments<span class="token punctuation">..</span>.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h4 id="六、开通负载均衡器"><a href="#六、开通负载均衡器" class="header-anchor">#</a> 六、开通负载均衡器</h4> <blockquote><p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_backend_address_pool</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_backend_address_pool_address</p> <p>https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb_rule</p> <p>这里依赖的是modules下面的模块创建的资源: &quot;terraform-azure-operator/modules/lb&quot;</p></blockquote> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/service
+$  <span class="token function">vim</span> lb.tf
+module <span class="token string">&quot;lb&quot;</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">source</span>                 <span class="token operator">=</span> <span class="token string">&quot;../../../modules/lb&quot;</span>
+  lb_name                <span class="token operator">=</span> <span class="token string">&quot;terraformdemo-lb&quot;</span>
+  lb_sku                 <span class="token operator">=</span> <span class="token string">&quot;Standard&quot;</span>
+  lb_backend_pool        <span class="token operator">=</span> <span class="token string">&quot;terraformdemo-lb-backend-pool&quot;</span>
+  lb_rule_name           <span class="token operator">=</span> <span class="token string">&quot;terraformdemo-lb-rule&quot;</span>
+  frontend_port          <span class="token operator">=</span> <span class="token number">80</span>
+  backend_port           <span class="token operator">=</span> <span class="token number">80</span>
+  location_name          <span class="token operator">=</span> local.location_name
+  resource_group_name    <span class="token operator">=</span> local.resource_group_name
+  public_ip_address_id   <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.lb_public_ip
+  vnet_id                <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.virtual_network_id
+  vms_private_ip_address <span class="token operator">=</span> module.vms.vms_private_ip_address
+<span class="token punctuation">}</span>
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+<span class="token comment"># 自动迁移状态</span>
+$ terraform init -migrate-state
+
+<span class="token comment"># 存储当前配置而不更改状态</span>
+$ terraform init <span class="token parameter variable">-reconfigure</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><p><strong>备注</strong>:</p> <ul><li>项目这里创建的负载均衡器是调用modules下的lb模块进行创建的</li> <li>控制台验证负载均衡器的创建结果</li></ul> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220924023359091.png" alt="image-20220924023359091"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220924023431210.png" alt="image-20220924023431210"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220924023555524.png" alt="image-20220924023555524"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220924023457027.png" alt="image-20220924023457027"></p> <p><img src="https://bruce-log-img.oss-cn-shanghai.aliyuncs.com/image-20220924024606667.png" alt="image-20220924024606667"></p> <ul><li>测试负载均衡</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ <span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">seq</span> <span class="token number">100</span><span class="token variable">`</span></span><span class="token punctuation">;</span><span class="token keyword">do</span> <span class="token function">curl</span> <span class="token parameter variable">-s</span> http://20.169.228.129<span class="token punctuation">;</span><span class="token keyword">done</span><span class="token operator">|</span><span class="token function">sort</span> <span class="token operator">|</span><span class="token function">uniq</span> <span class="token parameter variable">-c</span>
+     <span class="token number">27</span> server01
+     <span class="token number">73</span> server02
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="七、dns解析"><a href="#七、dns解析" class="header-anchor">#</a> 七、dns解析</h4> <ul><li>这里使用阿里云dns做一个模板,因为Azure用的是国外的资源;阿里云国内资源不能解析国外地址</li></ul> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 进入项目目录</span>
+$ <span class="token builtin class-name">cd</span> terraform-azure-operator/env/dev/service
+$  <span class="token function">vim</span> alicloud-dns.tf.origin
+locals <span class="token punctuation">{</span>
+  dns_zone_name <span class="token operator">=</span> <span class="token string">&quot;chsaos.com&quot;</span>
+  dns_record    <span class="token operator">=</span> <span class="token string">&quot;azure&quot;</span>
+  eip           <span class="token operator">=</span> data.terraform_remote_state.network-data.outputs.lb_public_address
+  record_type   <span class="token operator">=</span> <span class="token string">&quot;CNAME&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment"># demo.chsaos.com</span>
+resource <span class="token string">&quot;alicloud_dns_record&quot;</span> <span class="token string">&quot;record&quot;</span> <span class="token punctuation">{</span>
+  name        <span class="token operator">=</span> local.dns_zone_name
+  host_record <span class="token operator">=</span> local.dns_record
+  <span class="token builtin class-name">type</span>        <span class="token operator">=</span> local.record_type
+  value       <span class="token operator">=</span> local.eip
+<span class="token punctuation">}</span>
+
+
+<span class="token comment"># 需要使用api认证的export</span>
+<span class="token comment"># export ALICLOUD_ACCESS_KEY=&quot;xxxxxx&quot;</span>
+<span class="token comment"># export ALICLOUD_SECRET_KEY=&quot;xxxxxx&quot;</span>
+<span class="token comment"># export ALICLOUD_REGION=&quot;cn-shanghai&quot;</span>
+<span class="token comment"># export TF_CLI_CONFIG_FILE=/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc</span>
+
+<span class="token comment"># 登录Azure</span>
+$ az login --use-device-code
+
+<span class="token comment"># 声明环境变量</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">TF_CLI_CONFIG_FILE</span><span class="token operator">=</span>/home/terraform/youdianzhishi-terraform/terraform-azure-operator/.terraformrc
+
+<span class="token comment"># 执行terraform命令</span>
+$ terraform init 
+$ terraform <span class="token function">fmt</span> 或 terraform init <span class="token parameter variable">-recursive</span>
+$ terraform validate
+$ terraform plan
+$ terraform apply 或 terraform apply -auto-approve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2024/04/09, 16:48:42</span></div></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/b78d42/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">Terraform扩展</div></a> <a href="/pages/e186e7/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">K8S实践</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/b78d42/" class="prev">Terraform扩展</a></span> <span class="next"><a href="/pages/e186e7/">K8S实践</a>→
+      </span></p></div></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/2e807e/"><div>
+            AWS NAT-NetWork-Firwalld配置(一)
+            <!----></div></a> <span class="date">04-09</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/856d88/"><div>
+            AWS NAT-NetWork-Firwalld配置(二)
+            <!----></div></a> <span class="date">04-09</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/d27d92/"><div>
+            kubernetes部署minio对象存储
+            <!----></div></a> <span class="date">01-18</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:526453770@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/banna2019" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2019-2024
+    <span>Bruce Tao Blog Space | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.8758b392.js" defer></script><script src="/assets/js/3.9d37e447.js" defer></script><script src="/assets/js/2.f0782796.js" defer></script><script src="/assets/js/92.81a60178.js" defer></script>
+  </body>
+</html>
